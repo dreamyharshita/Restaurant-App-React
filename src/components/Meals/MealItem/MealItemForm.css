@@ -1,0 +1,19 @@
+.form{
+    display: flex;
+    margin:1rem;
+}
+
+.form label{
+    font-weight: bold;
+    color:black;
+    font-size: small;
+}
+.form input{
+    margin-left: 1rem;
+    width: 4rem;
+    height: 2rem;
+}
+.form button{
+    background-color: brown;
+    color:white
+}

@@ -1,6 +1,7 @@
 import React from "react";
-
+import MealItemForm from './MealItemForm.js';
 import './MealsDisplay.css';
+import Card from "../../UI/Card.js";
 
 
 const MealsDisplay=(props)=>{
@@ -16,7 +17,11 @@ return(
             <div className="description">  {data.description}</div>
              <div className="price"> {data.price} </div>
              </div>
-             <div></div>
+             <div>
+              <Card>
+              <MealItemForm/>
+              </Card>
+             </div>
         </li>
         
         
