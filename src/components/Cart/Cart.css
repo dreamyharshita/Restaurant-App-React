@@ -16,7 +16,10 @@
   }
   
   .actions {
-    text-align: right;
+    justify-content: center;
+   text-align: center;
+   display: flex;
+  flex-wrap: wrap;
   }
   
   .actions button {
@@ -28,6 +31,8 @@
     border-radius: 25px;
     margin-left: 1rem;
   }
+
+
   
   .actions button:hover,
   .actions button:active {
@@ -36,9 +41,7 @@
     color: white;
   }
   
-  .actions .button--alt {
-    color: #8a2b06;
-  }
+  
   
   .actions .button {
     background-color: #8a2b06;

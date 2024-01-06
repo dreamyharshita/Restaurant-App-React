@@ -5,7 +5,7 @@ const Cart=(props)=>{
     const cartItems=<ul className="cart-items">
         {[{id:'c1',name:'sushi',amount:2,price:12.99},].map((item)=><li>{item.name}</li>)}
         </ul>;
-return <ItemModal>
+return <ItemModal onClose={props.onClose}>
     {cartItems}
     <div className="total">
         <span>
@@ -16,11 +16,9 @@ return <ItemModal>
         </span>
     </div>
     <div className="actions">
-<button className="button--alt">close
-</button>
-<button className="button">
-order
-</button>
+<button className="button" onClick={props.onClose}>close</button>
+<br/>
+<button className="button">order</button>
     </div>
 </ItemModal>
 
