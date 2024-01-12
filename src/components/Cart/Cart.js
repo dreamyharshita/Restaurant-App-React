@@ -1,9 +1,21 @@
 import ItemModal from '../UI/ItemModal';
 import './Cart.css';
+import CartContext from '../../store/cart-context';
+import { useContext } from 'react';
 
 const Cart=(props)=>{
+    const cartCTX=useContext(CartContext);
+    let total=0;
     const cartItems=<ul className="cart-items">
-        {[{id:'c1',name:'sushi',amount:2,price:12.99},].map((item)=><li>{item.name}</li>)}
+        {
+        cartCTX.items.map(item=>{
+         total=total+(parseFloat(item.price)*parseInt(item.quantity));
+        
+         return <li>{item.name} Price: {item.price} Quantity: {item.quantity}</li>
+        })
+        
+        
+        }
         </ul>;
 return <ItemModal onClose={props.onClose}>
     {cartItems}
@@ -12,7 +24,7 @@ return <ItemModal onClose={props.onClose}>
             total amount
         </span>
         <span>
-            35.66
+            {total}
         </span>
     </div>
     <div className="actions">

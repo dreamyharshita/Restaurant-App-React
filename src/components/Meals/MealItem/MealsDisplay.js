@@ -16,10 +16,12 @@ return(
             <h3> {data.name} </h3>
             <div className="description">  {data.description}</div>
              <div className="price"> {data.price} </div>
+            
              </div>
              <div>
               <Card>
-              <MealItemForm/>
+              <MealItemForm id={data.id} item={data}/>
+             
               </Card>
              </div>
         </li>

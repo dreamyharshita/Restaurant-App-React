@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartIcon from '../Cart/CartIcon';
 import './HeaderCartButton.css';
+import CartContext from "../../store/cart-context";
 
 
 
@@ -9,8 +10,13 @@ import './HeaderCartButton.css';
 const HeaderCartButton=(props)=>{
   
 
+const CartCtx= useContext(CartContext);
 
+let numberofCartItems=0;
 
+CartCtx.items.forEach(item=>{
+  numberofCartItems=numberofCartItems+item.quantity;
+})
 
 
  
@@ -23,7 +29,7 @@ return (
           Your Cart
         </span>
         <span className="badge">
-           3
+           {numberofCartItems}
         </span>
     </button>
 )
