@@ -47,3 +47,11 @@
     background-color: #8a2b06;
     color: white;
   }
+
+  .li-edit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+   
+  }

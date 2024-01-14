@@ -11,7 +11,7 @@ const addItemInCart=(event)=>{
     event.preventDefault();
    
     const quantity=document.getElementById('amount_' + props.id).value;
-
+      console.log("additem");
     cartcntx.addItem({...props.item,"quantity":parseInt(quantity)});
    
 }
